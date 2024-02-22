@@ -7,20 +7,13 @@ on:
   pull_request:
 
 jobs:
-  Jest-Config-Pipeline:
+  Jest-tests-Modelo-Whitebox:
     runs-on: ubuntu-22.04
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        browser: [chrome]
     steps:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Install modules
         run: npm install
-  Jest-tests-Modelo-Whitebox:
-    runs-on: ubuntu-22.04
-    steps:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Install modules
