@@ -22,3 +22,10 @@ jobs:
           npm install -g moment@2.29.4
       - name: Run white box tests 🧪
         run: npm run jest
+      - name: Generate Jest HTML report
+        run: npx jest --reporters="default" --reporters="jest-html-reporters"
+      - name: Upload Jest HTML report as artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: jest-html-report
+          path: ./jest-html-reports/
