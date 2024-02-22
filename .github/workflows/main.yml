@@ -7,7 +7,7 @@ on:
   pull_request:
 
 jobs:
-  cypress-tests-Modelo-Blackbox:
+  Jest-Config-Pipeline:
     runs-on: ubuntu-22.04
     strategy:
       matrix:
